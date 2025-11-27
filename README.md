@@ -3,10 +3,10 @@
 > **CPE 222 Digital Electronics and Logic Design Project** - A reaction-based game implemented on the Digilent Basys 3 Artix-7 FPGA board using Verilog HDL.
 
 ## 👥 Team Members
-* **Panjapon Poobancheun** (ID: 67070503423) - *System Architect*
-* **Sorawit Chaithong** (ID: 67070503442) - *ROLE2*
-* **Kittiphat Noikate** (ID: 67070503459) - *ROLE3*
-* **Piti Srisongkram** (ID: 67070503467) - *ROLE4*
+* **Panjapon Poobancheun** (ID: 67070503423) - *Unknown*
+* **Sorawit Chaithong** (ID: 67070503442) - *Unknown*
+* **Kittiphat Noikate** (ID: 67070503459) - *System Architect*
+* **Piti Srisongkram** (ID: 67070503467) - *Unknown*
 
 ## 🎮 Project Overview
 This project simulates the classic **Whack-a-Mole** arcade game completely in digital logic hardware. The system tests the player's reaction time by lighting up random LEDs (moles), which must be *hit* by toggling the corresponding switches (hammers) within a time limit.
@@ -61,6 +61,28 @@ Since we have **one board** but **4 members**, we follow the **"Simulation First
 4.**Push:** Only push code that compiles and simulates correctly.  
 5.**Hardware Test:** The hardware lead pulls the latest code to generate bitstream (`.bit`) and tests on Basys 3.
 
-
 ### 📝 Notes
 * *Please do not push the entire Vivado project folder (`.xpr`, `.log`, `.jou`). Only push Source (`src/`) and Constraints (`const/`).*
+
+### 🗃️ Module Structure
+
+__WHACK-A-MOLE__
+```
+top_module.v            (Top level: Link every modules)
+│
+├── clk_divider.v       (Clock management: Hz convert)
+│
+├── input_sync.v        (Input Handler: Debounce button and Synchronize switch)
+│
+├── game_fsm.v          (Game Brain: Control State (IDLE / PLAY / GAME OVER))
+│
+├── mole_gen.v          (Mole Generator: Random a moles)
+│   ├── lfsr_core       (Random with Linear Feedback Shift Register)
+│   └── mole_timer      (Countdown each of moles)
+│
+├── hit_detect.v        (Collision Check: Compare a position Switch vs LED)
+│
+└── seven_seg.v         (Display Controller: Display scoreboard & timing)
+    ├── bin_to_bcd      (Convert binary to decimal)
+    └── segment_mux     (Switch display)
+```
