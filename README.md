@@ -1,6 +1,6 @@
 # 🐹 Whack-a-Mole FPGA (Basys 3)
 
-> **CPE 222 Digital Electronics and Logic Design Project** > A reaction-based game implemented on the Digilent Basys 3 Artix-7 FPGA board using Verilog HDL.
+> **CPE 222 Digital Electronics and Logic Design Project** - A reaction-based game implemented on the Digilent Basys 3 Artix-7 FPGA board using Verilog HDL.
 
 ## 👥 Team Members
 * **Panjapon Poobancheun** (ID: 67070503423) - *ROLE1*
@@ -60,6 +60,7 @@ Since we have **one board** but **4 members**, we follow the **"Simulation First
 * Run Behavioral Simulation. **Verify the waveform first!**
 4.**Push:** Only push code that compiles and simulates correctly.  
 5.**Hardware Test:** The hardware lead pulls the latest code to generate bitstream (`.bit`) and tests on Basys 3.
+
 
 ### 📝 Notes
 * *Please do not push the entire Vivado project folder (`.xpr`, `.log`, `.jou`). Only push Source (`src/`) and Constraints (`const/`).*
