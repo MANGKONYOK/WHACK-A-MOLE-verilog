@@ -3,7 +3,7 @@
 > **CPE 222 Digital Electronics and Logic Design Project** - A reaction-based game implemented on the Digilent Basys 3 Artix-7 FPGA board using Verilog HDL.
 
 ## 👥 Team Members
-* **Panjapon Poobancheun** (ID: 67070503423) - *ROLE1*
+* **Panjapon Poobancheun** (ID: 67070503423) - *System Architect*
 * **Sorawit Chaithong** (ID: 67070503442) - *ROLE2*
 * **Kittiphat Noikate** (ID: 67070503459) - *ROLE3*
 * **Piti Srisongkram** (ID: 67070503467) - *ROLE4*
