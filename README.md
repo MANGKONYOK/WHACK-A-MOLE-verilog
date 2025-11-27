@@ -57,7 +57,7 @@ Since we have **one board** but **4 members**, we follow the **"Simulation First
 3.**Simulate:**
 * Open **Vivado** (or EDA Playground).
 * Add your `.v` file and its corresponding `_tb.v` (Testbench).
-* Run Behavioral Simulation. **Verify the waveform first!**
+* Run Behavioral Simulation. **Verify the waveform first!**         
 4.**Push:** Only push code that compiles and simulates correctly.  
 5.**Hardware Test:** The hardware lead pulls the latest code to generate bitstream (`.bit`) and tests on Basys 3.
 
