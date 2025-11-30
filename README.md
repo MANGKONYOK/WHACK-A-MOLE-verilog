@@ -3,10 +3,10 @@
 > **CPE 222 Digital Electronics and Logic Design Project** - A reaction-based game implemented on the Digilent Basys 3 Artix-7 FPGA board using Verilog HDL.
 
 ## 👥 Team Members
-* **Panjapon Poobancheun** (ID: 67070503423) - *Unknown*
-* **Sorawit Chaithong** (ID: 67070503442) - *Unknown*
-* **Kittiphat Noikate** (ID: 67070503459) - *System Architect*
-* **Piti Srisongkram** (ID: 67070503467) - *Unknown*
+* **Panjapon Poobancheun** (ID: 67070503423)
+* **Sorawit Chaithong** (ID: 67070503442)
+* **Kittiphat Noikate** (ID: 67070503459)
+* **Piti Srisongkram** (ID: 67070503467)
 
 ## 🎮 Project Overview
 This project simulates the classic **Whack-a-Mole** arcade game completely in digital logic hardware. The system tests the player's reaction time by lighting up random LEDs (moles), which must be *hit* by toggling the corresponding switches (hammers) within a time limit.
