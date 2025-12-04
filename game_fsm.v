@@ -2,12 +2,12 @@ module game_fsm (
 
     input wire clk,
     input wire reset,          // Active High (Button BTNC)
-    input wire start_btn,      // start button
-    input wire game_time_up,   // from timer module
+    input wire start_btn,      // start button (MUST BE DEBOUNCED EXTERNALLY)
+    input wire game_time_up,   // from timer module (Must be Synchronous to clk)
     
     output reg game_active,    // 1 = start game
     output reg sys_reset       // 1 = reset system
-
+    output wire [1:0] current_state_debug // for debugging
 );
 
     // State Encoding (Moore Machine) 
@@ -58,7 +58,7 @@ module game_fsm (
             end
 
             S_DONE: begin
-                // reset if press button again
+                // reset if press button again (DONE -> IDLE -> PLAY)
                 if (btn_pressed)
                     next_state = S_IDLE;
             end
@@ -85,5 +85,7 @@ module game_fsm (
             end
         endcase
     end
+
+    assign current_state_debug = current_state; // for debugging
 
 endmodule
