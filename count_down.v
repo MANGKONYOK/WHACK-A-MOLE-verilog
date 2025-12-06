@@ -11,9 +11,9 @@ module tb;
         $monitor("Time=%0t | count=%0d", $time, count);
 
         rst = 1; #2; rst = 0;
-        start = 1; // เริ่มนับถอยหลัง
+        start = 1; // Start countdown
 
-        #200; // รอให้ครบการนับ
+        #200; // Wait for count completion
         $finish;
     end
 endmodule
@@ -21,13 +21,13 @@ endmodule
 module countdown60 (
     input wire clk,       // clock
     input wire rst,       // reset
-    input wire start,     // input=1 => เริ่มนับถอยหลัง
-    output reg [6:0] count // นับ 60..0
+    input wire start,     // input=1 => Start countdown
+    output reg [6:0] count // Count 60..0
 );
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            count <= 7'd60;   // โหลด 60 วินาที
+            count <= 7'd60;   // Load 60 seconds
         end
         else begin
             if (start) begin
