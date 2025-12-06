@@ -1,5 +1,5 @@
 module input_sync (
-    input wire clk,             // Low-frequency clock (e.g., 1kHz from clk_divider)
+    input wire clk,             // Low-frequency clock
     input wire btn_raw,         // Raw button input from the board (Asynchronous)
     input wire [8:0] sw_raw,    // Raw switch inputs from the board (Asynchronous)
     
